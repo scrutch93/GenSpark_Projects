@@ -3,10 +3,13 @@ package com.company;
 import java.util.Scanner;
 import java.util.Random;
 
- class Main {
+ public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        new Main(args);
+    }
+    public Main(String[] args){
         Scanner myObj = new Scanner(System.in);
         Random rand = new Random();
 
@@ -45,8 +48,14 @@ import java.util.Random;
 
            int numGuess = myObj.nextInt();
            if (numGuess == int_random) {
+
                //System.out.println("Your guess is too low. Take another guess.");
-               System.out.println("Great job, you guessed the number in " + i + " attempts");
+               System.out.println("Great job, you guessed the number in " + i + " attempts. Would you like to play again?");
+               String restart = myObj.next();
+               if (restart.equals("y")){
+                   new Main(args);
+               }else
+                   System.out.println("Game Over");
                break;
            } else if (numGuess < int_random && i != maxTrials-1) {
                //
@@ -57,8 +66,14 @@ import java.util.Random;
            }
        }
            if (i == 7) {
-               System.out.println("You have exceeded the allowed amount of attempts. Would you like to play again? Enter Y or N ");
+               String restart = myObj.next();
+               System.out.println("You have exceeded the allowed amount of attempts. Would you like to play again? Enter y or n ");
+               if (restart.equals("y")){
+                   new Main(args);
+               }else
+                   System.out.println("Game Over");
            }
+
        }}
 
 
