@@ -16,3 +16,7 @@ Simple project where user is asked to select between two caves; one with dragon 
 A Guessing game where the user has to guess a number within 6 attempts.
 
 ![ezgif-6-cfc17b90a8](https://user-images.githubusercontent.com/80648971/149758222-7b91ed2a-eb18-4d05-99b2-0e39c0997da9.gif)
+
+## Hangman Project
+
+### User Story
